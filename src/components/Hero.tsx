@@ -1,5 +1,7 @@
 export default function Hero() {
-  return (
+    return(
+    <>
+
     <section className="min-h-screen bg-black flex flex-col justify-center items-center px-6 text-center">
       {/* Heading with horizontal fade gradient */}
       <h1
@@ -43,5 +45,19 @@ export default function Hero() {
         </a>
       </div>
     </section>
+
+    <section className="bg-black flex justify-center items-center h-64">
+      <h1
+        className="text-4xl md:text-6xl font-semibold text-center"
+        style={{
+          background: 'linear-gradient(90deg, #007aff, #af52de, #ff3b30, #ff9500)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+        }}
+      >
+        Top–notch designs, delivered at your doorstep
+      </h1>
+    </section>
+    </>
   );
 }
