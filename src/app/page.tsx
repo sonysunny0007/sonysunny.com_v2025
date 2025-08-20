@@ -4,6 +4,9 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
+import Testimonials from "@/components/testimonial";
+import Blog from "@/components/blog";
+import Store from "@/components/store";
 
 export default function Home() {
   return (
@@ -13,6 +16,9 @@ export default function Home() {
       {/* <About /> */}
       <Services />
       <Projects />
+      <Testimonials/>
+      <Blog/>
+      <Store/>
       <Footer />
     </>
   );
