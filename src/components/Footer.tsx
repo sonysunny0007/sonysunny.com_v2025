@@ -1,3 +1,5 @@
+import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-12">
@@ -6,20 +8,20 @@ export default function Footer() {
         <div>
           <h2 className="text-2xl font-bold">sonysunny.com</h2>
           <p className="mt-4 text-gray-400">
-            Build beautiful landing pages fast.
+            Connecting Code, Circuits, and the Cloud.
           </p>
-          <div className="flex space-x-4 mt-6">
+          <div className="flex space-x-4 mt-6 text-xl">
             <a href="#" aria-label="Instagram">
-              <i className="fab fa-instagram text-xl"></i>
+              <FaInstagram />
             </a>
             <a href="#" aria-label="Twitter">
-              <i className="fab fa-twitter text-xl"></i>
+              <FaTwitter />
             </a>
             <a href="#" aria-label="Facebook">
-              <i className="fab fa-facebook text-xl"></i>
+              <FaFacebook />
             </a>
             <a href="#" aria-label="LinkedIn">
-              <i className="fab fa-linkedin text-xl"></i>
+              <FaLinkedin />
             </a>
           </div>
         </div>
@@ -38,10 +40,10 @@ export default function Footer() {
 
         {/* Template */}
         <div>
-          <h3 className="font-semibold mb-4">TEMPLATE</h3>
+          <h3 className="font-semibold mb-4">For you</h3>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="#">Style Guide</a></li>
-            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="#">Licenses</a></li>
           </ul>
         </div>
@@ -52,7 +54,7 @@ export default function Footer() {
           <form className="bg-neutral-900 p-4 rounded-xl space-y-3">
             <input
               type="email"
-              placeholder="hello@smith.com"
+              placeholder="hello@sonysunny.com"
               className="w-full px-4 py-2 rounded-lg bg-neutral-800 text-white focus:outline-none"
             />
             <button
@@ -72,4 +74,3 @@ export default function Footer() {
     </footer>
   );
 }
-

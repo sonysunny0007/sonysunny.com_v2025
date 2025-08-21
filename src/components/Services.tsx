@@ -1,12 +1,50 @@
+import Image from "next/image";
 const features = [
   { 
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+      /*<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
+      </svg>*/
+      <div className="flex items-center justify-self-end gap-3">
+        {/*Arm cortex-M Icon*/}
+        <Image
+            src="/armpng2.png"
+            alt="ARM Cortex-M"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/embeddedlinux.png"
+            alt="Embedded linux"
+            width={32}
+            height={32}
+            />
+            {/*Microchip logo*/}
+        <Image
+            src="/mchip.png"
+            alt="Embedded linux"
+            width={32}
+            height={32}
+            />
+            {/*Arduino*/}
+        <Image
+            src="/arduino.png"
+            alt="Embedded linux"
+            width={32}
+            height={32}
+            />
+            {/*Raspberry PI*/}
+        <Image
+            src="/raspberry-pi.png"
+            alt="Embedded linux"
+            width={32}
+            height={32}
+            />
+      </div>
     ),
     title: "Firmware Development",
-    description: "Bring to the table win-win surv strategic ensure proactive domination At end of the.",
+    description: "Custom firmware development to power microcontrollers and embedded systems with reliable, efficient, and scalable code.",
   },
   {
     icon: (

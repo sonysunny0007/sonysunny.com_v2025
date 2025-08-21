@@ -18,8 +18,7 @@ export default function Hero() {
 
       {/* Paragraph */}
       <p className="max-w-3xl text-gray-300 text-lg mb-12 leading-relaxed">
-        Bring to the table win-win survival strategies to ensure proactive domination.  
-        At the end of the day, going forward, a new normal.
+        Building Smarter Systems by Connecting Code, Circuits, and the Cloud — One Layer at a Time.
       </p>
 
       {/* Buttons */}
