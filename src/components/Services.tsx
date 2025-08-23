@@ -2,9 +2,6 @@ import Image from "next/image";
 const features = [
   { 
     icon: (
-      /*<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>*/
       <div className="flex items-center justify-self-end gap-3">
         {/*Arm cortex-M Icon*/}
         <Image
@@ -29,7 +26,7 @@ const features = [
             />
             {/*Arduino*/}
         <Image
-            src="/arduino.png"
+            src="/ard.png"
             alt="Embedded linux"
             width={32}
             height={32}
@@ -41,6 +38,13 @@ const features = [
             width={32}
             height={32}
             />
+        {/*Texas Instruments*/}
+        <Image
+            src="/ti.png"
+            alt="Texas Instruments"
+            width={32}
+            height={32}
+            />
       </div>
     ),
     title: "Firmware Development",
@@ -48,18 +52,51 @@ const features = [
   },
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
+        <div className="flex items-center justify-self-end gap-3">
+        {/*Arm cortex-M Icon*/}
+        <Image
+            src="/altium.png"
+            alt="Altium Designer"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/orcad.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+        <Image
+            src="/ltspice.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+            </div>
     ),
     title: "Hardware Design",
     description: "Bring to the table win-win surv strategic ensure proactive domination At end of the.",
   },
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-      </svg>
+      <div className="flex items-center justify-self-end gap-3">
+        {/*Arm cortex-M Icon*/}
+        
+        <Image
+            src="/aws.png"
+            alt="Altium Designer"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/azure.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+            </div>
     ),
     title: "Cloud Integration",
     description: "Bring to the table win-win surv strategic ensure proactive domination At end of the.",
@@ -67,9 +104,51 @@ const features = [
 
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-      </svg>
+      <div className="flex items-center justify-self-end gap-3">
+        {/*Arm cortex-M Icon*/}
+        
+        <Image
+            src="/python3.png"
+            alt="Altium Designer"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/c++.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/js.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/react.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/nodejs.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/git.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+            </div>
     ),
     title: "Software Development",
     description: "Bring to the table win-win surv strategic ensure proactive domination At end of the.",
@@ -77,11 +156,25 @@ const features = [
 
   {
     icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="CurrentColor" className="w6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>      
-        </svg>
+        <div className="flex items-center justify-self-end gap-3">
+        {/*Arm cortex-M Icon*/}
+        
+        <Image
+            src="/python3.png"
+            alt="Altium Designer"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/azure.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+            </div>
     ),
-        title: "Icons",
+        title: "UI/UX & Full Stack Development",
         description: "Bring",
   },
   
@@ -121,10 +214,10 @@ export default function FeatureCards() {
             {features.map((item, index) => (
               <div
                 key={index}
-                className="bg-[#111] rounded-xl p-8 border border-gray-800 hover:border-yellow-400 transition-colors"
+                className="bg-[#111] rounded-xl p-8 border border-gray-800 hover:border-lime-400 transition-colors"
               >
                 {/* Icon */}
-                <div className="w-12 h-12 mb-6 rounded-lg bg-gray-900 flex items-center justify-center text-yellow-400">
+                <div className="w-12 h-12 mb-6 rounded-full flex items-center justify-center text-yellow-400">
                   {item.icon}
                 </div>
 
