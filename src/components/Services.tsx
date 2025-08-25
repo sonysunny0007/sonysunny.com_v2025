@@ -160,18 +160,40 @@ const features = [
         {/*Arm cortex-M Icon*/}
         
         <Image
-            src="/python3.png"
+            src="/pallete.png"
             alt="Altium Designer"
             width={32}
             height={32}
             />
         {/*Embedded Linux Icon*/}
         <Image
-            src="/azure.png"
+            src="/typography.jpg"
             alt="Orcad by Cadence"
             width={32}
             height={32}
             />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/ux.jpg"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/backend.jpg"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/wireframe.jpg"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+        
             </div>
     ),
         title: "UI/UX & Full Stack Development",
