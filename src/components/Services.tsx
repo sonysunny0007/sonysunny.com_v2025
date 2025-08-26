@@ -76,7 +76,7 @@ const features = [
             </div>
     ),
     title: "Hardware Design",
-    description: "Bring to the table win-win surv strategic ensure proactive domination At end of the.",
+    description: "Innovative hardware design solutions powered by Altium, OrCAD, and LTspice to bring your ideas to life.",
   },
   {
     icon: (
@@ -99,7 +99,7 @@ const features = [
             </div>
     ),
     title: "Cloud Integration",
-    description: "Bring to the table win-win surv strategic ensure proactive domination At end of the.",
+    description: "Future-ready solutions powered by AWS and Azure to accelerate your digital transformation.",
   },
 
   {
@@ -151,7 +151,7 @@ const features = [
             </div>
     ),
     title: "Software Development",
-    description: "Bring to the table win-win surv strategic ensure proactive domination At end of the.",
+    description: "Building smart, scalable, and reliable software solutions tailored to your vision.",
   },
 
   {
@@ -196,18 +196,32 @@ const features = [
         
             </div>
     ),
-        title: "UI/UX & Full Stack Development",
-        description: "Bring",
+        title: "UI/UX&Full Stack Development",
+        description: "Where stunning design meets robust technology — UI/UX and full-stack solutions that work.",
   },
   
    {
     icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="CurrentColor" className="w6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>      
-        </svg>
+        <div className="flex items-center justify-self-end gap-3">
+        {/*Arm cortex-M Icon*/}
+        
+        <Image
+            src="/android.png"
+            alt="Altium Designer"
+            width={32}
+            height={32}
+            />
+        {/*Embedded Linux Icon*/}
+        <Image
+            src="/apple.png"
+            alt="Orcad by Cadence"
+            width={32}
+            height={32}
+            />
+            </div>
     ),
         title: "Mobile App Development",
-        description: "Bring",
+        description: "Creating high-performance mobile apps for Android and iOS that deliver seamless experiences on every device.",
   },
 
 ];

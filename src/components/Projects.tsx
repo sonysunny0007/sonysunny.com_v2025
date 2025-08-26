@@ -3,22 +3,52 @@ import Image from "next/image";
 export default function PrioritySection() {
   const steps = [
     {
-      icon: "🔍",
+      icon: (
+        <div className="flex items-center justify-self-end gap-3">
+                {/*Research Icon*/}
+                <Image
+                    src="/research.png"
+                    alt="Altium Designer"
+                    width={32}
+                    height={32}
+                    />
+                    </div>
+      ),
       title: "Research",
       description:
-        "Bring to the table win-win surv strategies to ensure proactive domination.",
+        "We perform in-depth research to understand your product requirements, analyze technical challenges, and explore innovative solutions. Our team investigates emerging technologies, industry standards, and component-level optimizations to ensure a strong foundation for your firmware, hardware, and software development.",
     },
     {
-      icon: "📐",
+      icon: (
+        <div className="flex items-center justify-self-end gap-3">
+                {/*Research Icon*/}
+                <Image
+                    src="/market.png"
+                    alt="Altium Designer"
+                    width={32}
+                    height={32}
+                    />
+                    </div>
+      ),
       title: "Current Market Trend",
       description:
-        "Bring to the table win-win surv strategies to ensure proactive domination.",
+        "We stay ahead of the curve by analyzing current market demands, industry shifts, and technological advancements. By aligning your product development with these insights, we help you create solutions that are competitive, future-ready, and tailored to meet your customers’ expectations.",
     },
     {
-      icon: "🎨",
+      icon: (
+        <div className="flex items-center justify-self-end gap-3">
+                {/*Research Icon*/}
+                <Image
+                    src="/design.png"
+                    alt="Altium Designer"
+                    width={32}
+                    height={32}
+                    />
+                    </div>
+      ),
       title: "Design",
       description:
-        "Bring to the table win-win surv strategies to ensure proactive domination.",
+        "Our design process integrates creativity with engineering precision. From schematic design and PCB layout to firmware architecture and intuitive software interfaces, we ensure that every layer of your product is optimized for performance, scalability, and seamless integration.",
     },
   ];
 
@@ -47,7 +77,7 @@ export default function PrioritySection() {
             {steps.map((step, index) => (
               <div key={index} className="flex items-start gap-4">
                 {/* Icon Circle */}
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-lime-400 flex items-center justify-center text-black text-lg">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-black text-lg">
                   {step.icon}
                 </div>
 
@@ -67,7 +97,7 @@ export default function PrioritySection() {
           {/* Right Image */}
           <div className="flex justify-center">
             <img
-              src="/project_pic.png"
+              src="/research_iot.jpg"
               alt="Project"
               className="rounded-3xl object-cover max-h-[500px]"
             />
