@@ -56,6 +56,7 @@ export default function BlogSection() {
   };
 
   return (
+    <main className="bg-black text-white" id="blog">
     <section className="min-h-screen flex flex-col justify-center items-center bg-black text-white py-20 px-6">
       {/* Heading */}
       <h1
@@ -132,5 +133,6 @@ export default function BlogSection() {
         </Link>
       </div>
     </section>
+    </main>
   );
 }
