@@ -10,9 +10,9 @@ export default function Navbar() {
         {/* Center: Nav Links */}
         <nav className="mx-auto space-x-8">
           <a href="#about" className="text-white hover:text-blue-500 transition">About</a>
-          <a href="#Services" className="text-white hover:text-blue-500 transition">Services</a>
+          <a href="#services" className="text-white hover:text-blue-500 transition">Services</a>
           <a href="#blog" className="text-white hover:text-blue-500 transition">Blog</a>
-          <a href="#Store" className="text-white hover:text-blue-500 transition">Store</a>
+          <a href="#store" className="text-white hover:text-blue-500 transition">Store</a>
           <a href="#contact" className="text-white hover:text-blue-500 transition">Contact</a>
         </nav>
       </div>
