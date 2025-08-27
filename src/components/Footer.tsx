@@ -2,6 +2,7 @@ import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
+    <main className="bg-black text-white" id="contact">
     <footer className="bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Left Section */}
@@ -32,8 +33,8 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-400">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About us</a></li>
-            <li><a href="/projects">Project</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="/contact">Contact me</a></li>
           </ul>
         </div>
@@ -42,8 +43,8 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-4">For you</h3>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="#">Store</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#store">Store</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#">Licenses</a></li>
           </ul>
         </div>
@@ -72,5 +73,6 @@ export default function Footer() {
         © All rights reserved by <span className="font-semibold">sonysunny.com</span>. Powered by <span className="font-semibold">Next.js</span>.
       </div>
     </footer>
+    </main>
   );
 }
