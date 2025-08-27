@@ -236,6 +236,7 @@ const prog = [
 export default function FeatureCards() {
   return (
     <>
+    <main className="bg-black text-white" id="services">
       {/* First Section */}
       <section className="bg-black text-white py-16 px-6">
         <div className="max-w-6xl mx-auto">
@@ -282,6 +283,7 @@ export default function FeatureCards() {
         ))}
         </div>
       </section>
+      </main>
     </>
   );
 }
