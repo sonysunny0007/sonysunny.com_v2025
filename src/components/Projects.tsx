@@ -54,10 +54,11 @@ export default function PrioritySection() {
 
   return (
     <>
+    <main className="min-h-screen bg-black text-white" id="projects">
       {/* Section Heading */}
-      <section className="bg-black flex flex-col justify-center items-center px-6 text-center pt-10 pb-10">
+      <section className="flex flex-col justify-center items-center text-center py-20 px-6">
         <h1
-          className="text-4xl md:text-6xl font-semibold leading-tight mb-10"
+          className="text-4xl md:text-6xl font-semibold leading-tight mb-5"
           style={{
             background:
               "linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.15) 100%)",
@@ -104,6 +105,7 @@ export default function PrioritySection() {
           </div>
         </div>
       </section>
+      </main>
     </>
   );
 }
