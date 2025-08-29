@@ -83,7 +83,7 @@ export default function Hero() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Design. Develop. Deliver smarter with<br /> next-level experiences
+          Design. Develop. Deliver smarter <br /> Your partner in technology innovation
         </h1>
 
         <p className="max-w-3xl text-gray-300 text-lg mb-12 leading-relaxed">
