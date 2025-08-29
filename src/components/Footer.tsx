@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
@@ -7,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Left Section */}
         <div>
-          <h2 className="text-2xl font-bold">sonysunny.com</h2>
+          <Link href="/" className="text-2xl font-bold">sonysunny.com</Link>
           <p className="mt-4 text-gray-400">
             Connecting Code, Circuits, and the Cloud.
           </p>
