@@ -1,102 +1,104 @@
-"use client";
+// src/components/about.tsx
+import Image from "next/image";
 
-import { useEffect, useRef } from "react";
-
-export default function Hero() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return; // Ensure ctx exists
-
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
-    const particles: { x: number; y: number; dx: number; dy: number }[] = [];
-
-    for (let i = 0; i < 60; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        dx: (Math.random() - 0.5) * 1,
-        dy: (Math.random() - 0.5) * 1,
-      });
-    }
-
-    const draw = () => {
-      ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = "rgba(255,255,255,0.7)";
-
-      particles.forEach((p, i) => {
-        p.x += p.dx;
-        p.y += p.dy;
-
-        if (p.x < 0 || p.x > width) p.dx *= -1;
-        if (p.y < 0 || p.y > height) p.dy *= -1;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-        ctx.fill();
-
-        particles.forEach((p2, j) => {
-          if (i !== j) {
-            const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-            if (dist < 100) {
-              ctx.strokeStyle = "rgba(100,200,255,0.2)";
-              ctx.beginPath();
-              ctx.moveTo(p.x, p.y);
-              ctx.lineTo(p2.x, p2.y);
-              ctx.stroke();
-            }
-          }
-        });
-      });
-
-      requestAnimationFrame(draw);
-    };
-
-    draw();
-
-    const handleResize = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+export default function AboutPage() {
   return (
-    <section className="relative h-screen bg-black overflow-hidden">
-      <canvas ref={canvasRef} className="absolute inset-0"></canvas>
-
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white">
-        <h1
-          className="text-4xl md:text-6xl font-semibold leading-tight mb-5"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.15) 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          Design that puts your <br /> growth on priority
-        </h1>
-
-        <p className="max-w-3xl text-gray-300 text-lg mb-12 leading-relaxed">
-          Building Smarter Systems by Connecting Code, Circuits, and the Cloud
-          — One Layer at a Time.a
-        </p>
-
-        <div className="flex gap-6">
-          <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
-            Start a project
-          </button>
+    <div className="min-h-screen w-full bg-black text-white px-6 py-12 space-y-24">
+      
+      {/* About Us */}
+      <section className="grid md:grid-cols-2 gap-12 items-center pt-10">
+        <div className="relative h-screen w-full h-72 md:h-96">
+          <Image
+            src="/images/about-us.jpg" // Replace with your image
+            alt="About Us"
+            fill
+            className="object-cover rounded-2xl shadow-lg"
+          />
         </div>
-      </div>
-    </section>
+        <div>
+          <h2 className="text-3xl font-bold mb-4">About Us</h2>
+          <p className="text-lg leading-relaxed mb-4">
+            At <strong>sonysunny.com</strong>, we are driven by innovation, precision,
+            and a passion for building technology that shapes the future. Our expertise
+            spans across firmware development, hardware design, software engineering,
+            cloud integration, and UI/UX design, making us a one-stop hub for end-to-end
+            technology solutions.
+          </p>
+          <p className="text-lg leading-relaxed">
+            We believe in creating smart, connected, and scalable systems that empower
+            businesses to thrive in the digital age. From embedded systems to seamless
+            cloud platforms, our solutions are designed to deliver efficiency, reliability,
+            and growth.
+          </p>
+        </div>
+      </section>
+
+      {/* Our Mission */}
+      <section className="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+          <p className="text-lg leading-relaxed">
+            To bridge the gap between hardware and software innovation, delivering
+            high-quality, future-ready solutions that help businesses succeed in a
+            rapidly evolving tech landscape.
+          </p>
+        </div>
+        <div className="relative w-full h-72 md:h-96">
+          <Image
+            src="/images/our-mission.jpg" // Replace with your image
+            alt="Our Mission"
+            fill
+            className="object-cover rounded-2xl shadow-lg"
+          />
+        </div>
+      </section>
+
+      {/* What We Do */}
+      <section className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative w-full h-72 md:h-96">
+          <Image
+            src="/images/what-we-do.jpg" // Replace with your image
+            alt="What We Do"
+            fill
+            className="object-cover rounded-2xl shadow-lg"
+          />
+        </div>
+        <div>
+          <h2 className="text-3xl font-bold mb-4">What We Do</h2>
+          <ul className="list-disc list-inside space-y-2 text-lg">
+            <li><strong>Firmware Development:</strong> Optimized, secure, and efficient low-level programming for cutting-edge devices.</li>
+            <li><strong>Hardware Design:</strong> Intelligent and robust hardware solutions tailored to your unique needs.</li>
+            <li><strong>Software Development:</strong> Scalable, secure, and high-performance applications for various platforms.</li>
+            <li><strong>Cloud Integration:</strong> Seamless connectivity between devices, systems, and the cloud for smarter operations.</li>
+            <li><strong>UI/UX Design:</strong> User-focused interfaces that deliver intuitive and engaging digital experiences.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-3xl font-bold mb-4">Why Choose Us?</h2>
+          <ul className="list-disc list-inside space-y-2 text-lg mb-4">
+            <li><strong>End-to-End Expertise:</strong> From concept to deployment, we handle every step of the process.</li>
+            <li><strong>Innovation-Driven:</strong> We leverage the latest technologies to create future-proof solutions.</li>
+            <li><strong>Quality-Focused:</strong> Every project meets the highest standards of performance and reliability.</li>
+            <li><strong>Collaborative Approach:</strong> We work closely with clients to ensure every solution aligns with their goals.</li>
+          </ul>
+          <p className="text-lg leading-relaxed">
+            Join us in creating the next generation of intelligent, connected technology.
+          </p>
+        </div>
+        <div className="relative w-full h-72 md:h-96">
+          <Image
+            src="/images/why-choose-us.jpg" // Replace with your image
+            alt="Why Choose Us"
+            fill
+            className="object-cover rounded-2xl shadow-lg"
+          />
+        </div>
+      </section>
+
+    </div>
   );
 }
