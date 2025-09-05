@@ -1,6 +1,7 @@
 // src/components/about.tsx
 import Image from "next/image";
 import { MdDescription } from "react-icons/md";
+import { TbSortDescendingNumbers } from "react-icons/tb";
 const experience =[
   {
     icon: (
@@ -44,7 +45,68 @@ const experience =[
     title:"Hardware Design",
     description: "hiiiiii"
   },
-  
+]
+
+const work_experience=[
+  {
+    period:"March 2015 - May 2018",
+    company: "Atwic R&D, India",
+    designation: "Hardware Design Engineer",
+    description: "heeeeeeeee"
+  },
+  {
+    period:"May 2018 - September 2018",
+    company: "Creopedia, India",
+    designation: "Team lead - AI",
+    description: "heeeeeeeee"
+  },
+  {
+    period:"September 2018 - April 2022",
+    company: "Cavli Wireless, India",
+    designation: "Embedded systems Engineer",
+    description: "hiiiiiii"
+  },
+  {
+    period:"Aug 2022 - Dec 2022",
+    company: "Site 2020, Canada",
+    designation: "Quality Specialist",
+    description: "heeeee"
+  },
+  {
+    period:"Jan 2023 - Present",
+    company: "Sirius Controls, Canada",
+    designation: "Product Testing",
+    description: "heeeee"
+  },
+  {
+    period:"Jan 2021 - Present",
+    company: "IoTGliders, Canada",
+    designation: "Founder & Consultant",
+    description: "heeeee"
+  },
+]
+
+const answers=[
+  {
+    question: "How can i get the services?",
+    answer: "You are at the right place.Please visit the service page",
+  },
+  {
+    question: "How can i get the services?",
+    answer: "You are at the right place.Please visit the service page",
+  },
+  {
+    question: "How can i get the services?",
+    answer: "You are at the right place.Please visit the service page",
+  },
+  {
+    question: "How can i get the services?",
+    answer: "You are at the right place.Please visit the service page",
+  },
+  {
+    question: "How can i get the services?",
+    answer: "You are at the right place.Please visit the service page",
+  },
 
 ]
 
@@ -202,7 +264,7 @@ export default function AboutPage() {
 <section className="grid md:grid-cols-2 gap-8 items-center text-center  pt-20">
   <div className="md:text-left">
     <h2
-      className="text-5xl md:text-5xl font-semibold leading-tight justify-center items-center text-center pt-10 pb-20"
+      className="text-5xl md:text-5xl font-semibold leading-tight justify-center items-center text-center pt-10 pb-20 pl-5"
       style={{
         background: 
           "linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.15) 100%)",
@@ -221,15 +283,109 @@ export default function AboutPage() {
   </div>
 </section>
 
-<section className="bg-black grid md:grid-cols-2 gap-4 items-center">
-  <div className="max-w-6xl w-130 mx-auto h-80 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition ">
+<section className="bg-black grid md:grid-cols-2 gap-2 items-center max-w-6xl mx-auto">
+  <div className="w-140 mx-auto h-80 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition ">
     <h3 className="text-3xl font-bold mb-3 shadow-lg whitespace-pre-line pl-10 pt-10">sony sunny</h3>
     <p className="text-gray-400 pl-10 pt-2">hey its me sony</p>
   </div>
-  <div className="max-w-6xl w-130 mx-auto h-80 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition ">
+  <div className="w-140 mx-auto h-80 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition ">
     <h3 className="text-3xl font-bold mb-3 shadow-lg whitespace-pre-line pl-10 pt-10">sony sunny</h3>
     <p className="text-gray-400 pl-10 pt-2">hey its me sony</p>
   </div>
+</section>
+
+<section className="bg-black items-center max-w-6xl mx-auto pt-15">
+  <div className="mx-auto h-80 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition">
+    <h3 className="text-3xl font-bold mb-3 shodow-lg whitespace-pre-line pl-5 pt-10">Real-time connect with <br />sony sunny</h3>
+    <p className="shadow-lg pl-5 text-gray-400">Connect with Ray</p>
+  </div>
+</section>
+
+
+<section className="bg-black text-white pt-25 py-10 pb-25">
+  <div className="flex flex-col justify-center items-center text-center">
+    <h1
+      className="text-4xl md:text-6xl font-semibold leading-tight"
+      style={{
+        background:
+         "linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.15) 100%)",
+        WebkitBackgroundClip:"text",
+        WebkitTextFillColor:"transparent",
+        }}
+        >
+          I have worked with some <br /> amazing companies.
+        </h1>
+  </div>
+</section>
+
+<section className="bg-black text-white pt-5">
+  <div className="grid gap-6 mx-auto max-w-4xl px-4">
+    {work_experience.map((item, index) => (
+      <div
+        key={index}
+        className="bg-[#111] rounded-2xl p-8 border border-gray-800 flex justify-between items-center"
+      >
+        {/* Left Column */}
+        <div className="flex-1">
+          <div className="text-sm text-gray-400">{item.period}</div>
+          <div className="text-3xl font-bold mt-2">{item.company}</div>
+        </div>
+
+        {/* Right Column */}
+        <div className="flex items-center gap-4 max-w-md">
+          <div className="text-right">
+            <div className="text-xl font-semibold">{item.designation}</div>
+            <div className="text-sm text-gray-400 shadow-lg">
+              {item.description}
+            </div>
+          </div>
+
+          <button className="bg-lime-400 text-black font-semibold w-12 h-12 rounded-full hover:bg-lime-300 transition">
+            <span className="text-xl">→</span>
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section className="min-h-screen grid md:grid-cols-2 bg-black">
+  <div className="flex justify-center items-center">
+    <div className="text-left">
+      <h1
+        className="text-3xl md:text-6xl font-semibold leading-tight"
+        style={{
+          background:
+          "linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.15) 100%)",
+        WebkitBackgroundClip:"text",
+        WebkitTextFillColor:"transparent",
+        }}>
+          We've got the <br /> answers
+      </h1>
+      <p className="text-gray-300 text-left font-sm pt-5">its normal</p>
+      <div className="justify-center items-center pt-5">
+    <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
+        start project
+    </button>
+  </div>
+  </div>
+  </div>
+  <div className="grid gap-4 mx-auto h-10 pt-35 w-150">
+    {answers.map((item,index)=>(
+      <div
+        key={index}
+        className="bg-[#111] rounded-2xl p-8 border border-gray-800 flex justify-between items-center"
+      >
+        <div className="flex justify-center items-center font-semibold">
+        {item.question}
+        </div>
+
+    </div>    
+    ))}
+
+
+  </div>
+
 </section>
 
   </main>
