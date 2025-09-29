@@ -5,40 +5,40 @@ import Link from "next/link";
 
 const blogs = [
   {
-    category: "UI/UX Design",
-    title: "Why Webflow is the future",
-    desc: "Bring to the table win-win surv strategies ensure proactive domination At end of the day.",
-    image: "/blog1.png",
+    category: "Embedded System",
+    title: "FreeRTOS Demystified: How Embedded Multitasking Works",
+    desc: "FreeRTOS is a lightweight, open-source real-time operating system that enables efficient multitasking on microcontrollers by managing tasks, scheduling, and communication with deterministic performance.",
+    image: "/freertos_embedded.png",
+  },
+  {
+    category: "Cloud",
+    title: "How MQTT Connects Your Firmware to the Cloud",
+    desc: "MQTT is a lightweight messaging protocol that connects embedded devices to the cloud by enabling efficient, reliable, and real-time data exchange over minimal network resources.",
+    image: "/mqtt_embedded.png",
+  },
+  {
+    category: "AI",
+    title: "AI on the Edge: ESP32-CAM & TinyML",
+    desc: "AI on the Edge: ESP32-CAM & TinyML explores how low-power microcontrollers like the ESP32-CAM can run machine learning models locally, enabling intelligent, real-time decision-making without relying on the cloud.",
+    image: "/esp32_ai.png",
+  },
+  {
+    category: "Software Development",
+    title: "Visualizing Embedded Data: Dashboards in React",
+    desc: "Learn how to create interactive React dashboards to visualize and monitor embedded system data effectively.",
+    image: "/embedded_data_react.png",
   },
   {
     category: "UI/UX Design",
-    title: "Optimizing User Experience",
-    desc: "Bring to the table win-win surv strategies ensure proactive domination At end of the day.",
-    image: "/blog2.png",
+    title: "Embedded UI/UX Meets Cloud",
+    desc: "Design intuitive UI/UX for embedded systems with seamless cloud integration, ensuring smooth user interactions and real-time data accessibility.",
+    image: "/embedded_uiux.png",
   },
   {
-    category: "Development",
-    title: "How to choose right colors",
-    desc: "Bring to the table win-win surv strategies ensure proactive domination At end of the day.",
-    image: "/blog3.png",
-  },
-  {
-    category: "Development",
-    title: "Scaling Next.js Apps",
-    desc: "Learn best practices to scale Next.js apps for large projects.",
-    image: "/blog4.png",
-  },
-  {
-    category: "UI/UX Design",
-    title: "Design Systems 101",
-    desc: "Why every modern product needs a design system for consistency.",
-    image: "/blog5.png",
-  },
-  {
-    category: "Productivity",
-    title: "Top 10 VS Code Extensions",
-    desc: "Boost your developer workflow with these must-have extensions.",
-    image: "/blog6.png",
+    category: "Embedded System",
+    title: "Best Practices for Managing Firmware Repositories",
+    desc: "Explore essential strategies for organizing, maintaining, and version-controlling firmware repositories efficiently.",
+    image: "/firmware_repository.png",
   },
 ];
 
