@@ -80,6 +80,7 @@ const answers = [
 ];
 
 export default function AboutPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
     <>
       <main className="min-h-screen bg-black text-white" id="about">
@@ -343,68 +344,70 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="min-h-screen grid md:grid-cols-2 bg-black">
-          <div className="flex justify-center items-center">
-            <div className="text-left">
-              <h1
-                className="text-3xl md:text-6xl font-semibold leading-tight"
-                style={{
-                  background:
-                    "linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.15) 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                We've got the <br /> answers
-              </h1>
-              <p className="text-gray-300 text-left font-sm pt-5">its normal</p>
-              <div className="justify-center items-center pt-5">
-                <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
-                  start project
-                </button>
+        <section className="min-h-screen grid md:grid-cols-2 bg-black py-12">
+      {/* Left Column */}
+      <div className="flex justify-center items-start md:items-center">
+        <div className="text-left px-8">
+          <h1
+            className="text-3xl md:text-6xl font-semibold leading-tight"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.15) 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            We've got the <br /> answers
+          </h1>
+          <p className="text-gray-300 text-left font-sm pt-5">its normal</p>
+          <div className="pt-5">
+            <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
+              start project
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Column */}
+      <div className="grid gap-4 mx-auto w-full max-w-[600px] h-fit self-center">
+        {answers.map((item, index) => (
+          <div
+            key={index}
+            className={`bg-[#111] rounded-2xl border border-gray-800 transition-all duration-300 p-6`}
+          >
+            {/* Question Row */}
+            <div
+              className="flex justify-between items-center cursor-pointer"
+              onClick={() =>
+                setOpenIndex(openIndex === index ? null : index)
+              }
+            >
+              <div className="text-xl font-bold text-left">
+                {item.question}
               </div>
+              <ChevronDown
+                className={`w-7 h-7 text-lime-400 transition-transform duration-300 ${
+                  openIndex === index ? "rotate-180" : ""
+                }`}
+              />
+            </div>
+
+            {/* Collapsible Answer */}
+            <div
+              className={`overflow-hidden transition-all duration-300 text-gray-400 text-sm ${
+                openIndex === index
+                  ? "max-h-40 mt-3 opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              {item.answer}
             </div>
           </div>
-          <div className="grid gap-4 mx-auto pt-35 w-150 h-fit">
-            {answers.map((item, index) => {
-              const [open, setOpen] = useState(false);
-              return (
-                <div
-                  key={index}
-                  className={`bg-[#111] rounded-2xl border border-gray-800 transition-all duration-300 ${
-                    open ? "p-8" : "p-6"
-                  }`}
-                >
-                  {/* Question Row */}
-                  <div
-                    className="flex justify-between items-center cursor-pointer"
-                    onClick={() => setOpen(!open)}
-                  >
-                    <div className="text-xl font-bold text-left">
-                      {item.question}
-                    </div>
-                    <ChevronDown
-                      className={`w-7 h-7 text-lime-400 transition-transform duration-300 ${
-                        open ? "rotate-180" : "rotate-0"
-                      }`}
-                    />
-                  </div>
+        ))}
+      </div>
+    </section>
 
-                  {/* Collapsible Answer */}
-                  <div
-                    className={`overflow-hidden transition-all duration-300 text-gray-400 text-sm ${
-                      open ? "max-h-40 mt-3 opacity-100" : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    {item.answer}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="bg-black items-center max-w-6xl mx-auto pt-10 pb-20">
+        <section className="bg-black items-center max-w-6xl mx-auto  pb-20">
           <div className="mx-auto h-120 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition">
             <div className="flex flex-col justify-center items-center text-center pt-10">
               <h1
