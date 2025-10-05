@@ -76,7 +76,7 @@ export default function Store() {
         {/* Explore More Button */}
         <div className="text-center">
           <Link
-            href="/blog"
+            href="/store"
             className="inline-block px-6 py-3 bg-lime-400 text-black rounded-full font-semibold hover:bg-lime-300 transition"
           >
             Explore More
