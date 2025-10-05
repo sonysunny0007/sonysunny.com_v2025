@@ -53,10 +53,11 @@ export default function Footer() {
         {/* Email Subscription */}
         <div>
           <h3 className="font-semibold mb-4">EMAIL</h3>
-          <form className="bg-neutral-900 p-4 rounded-xl space-y-3">
+          <form className="bg-neutral-900 p-4 rounded-xl space-y-3" action="mailto:sonysunny028@gmail.com" method="post" encType="text/plain">
             <input
               type="email"
-              placeholder="hello@sonysunny.com"
+              name="email"
+              placeholder="sonysunny028@gmail.com"
               className="w-full px-4 py-2 rounded-lg bg-neutral-800 text-white focus:outline-none"
             />
             <button
