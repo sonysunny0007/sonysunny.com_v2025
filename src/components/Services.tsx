@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 const features = [
   {
     icon: (
@@ -207,8 +210,14 @@ export default function FeatureCards() {
 
           <section className="flex items-center justify-center h-20 text-center pt-20">
             <div className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
-              Explore Services
+            <Link
+              href="/services"
+              >
+                Explore Services
+              </Link>
+              
             </div>
+              
           </section>
         </section>
 
