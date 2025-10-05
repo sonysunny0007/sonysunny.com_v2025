@@ -149,31 +149,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/*<section className="pt-20"> {/* Reduce padding top */}
-        {/*<div className="max-w-6xl mx-auto grid md:grid-cols-1 justify-center mt-6 h-120"> {/* Reduce margin top */}
-        {/*<div className="bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition">
-      <h1 className="text-2xl font-semibold">
-        Firmware Development
-      </h1>
-      <p className="mt-4 text-gray-300">
-        Specialized in low-level programming, embedded systems, and real-time solutions that power the next generation of smart devices.
-      </p>
-        <div className="grid md-gid-cols-3 justify-center mt-6">
-      <div className="grid md:grid-col-3 gap-8">
-        {experience.map((step, index) => (
-          <div key={index} className="flex items-start gap-4">
-            <div className="flex flex-col justify-center">
-              
-              {experience.icon}
-            </div>
-          </div>
-        )) }
-      </div>
-    </div>
-    </div>
- 
-  </div>
-</section>*/}
         <div className="pt-10">
           {/* Horizontal Divider */}
           <div className="w-full h-px my-6 bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
@@ -263,7 +238,17 @@ export default function AboutPage() {
 
         <section className="bg-black grid md:grid-cols-2 gap-2 items-center max-w-6xl mx-auto">
           <div className="w-140 mx-auto h-80 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition ">
-            <h3 className="text-3xl font-bold mb-3 shadow-lg whitespace-pre-line pl-10 pt-10">
+            <div className="flex items-center justify-center">
+              <Image
+                src="/embedded_system_devop.png"
+                alt="Embedded system development"
+                width={70}
+                height={100}
+                className="rounded-full"
+                priority={false}
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-3 shadow-lg whitespace-pre-line pl-10 pt-10">
               Embedded Systems Development
             </h3>
             <p className="text-gray-400 pl-10 pt-2">
@@ -273,9 +258,18 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="w-140 mx-auto h-80 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition ">
-            <h3 className="text-3xl font-bold mb-3 shadow-lg whitespace-pre-line pl-10 pt-10">
-              Software & <br />
-              Cloud Integration
+            <div className="flex items-center justify-center">
+              <Image
+                src="/software_cloud_integration.png"
+                alt="Embedded system development"
+                width={70}
+                height={100}
+                className="rounded-full"
+                priority={false}
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-3 shadow-lg whitespace-pre-line pl-10 pt-10">
+              Software & Cloud Integration
             </h3>
             <p className="text-gray-400 pl-10 pt-2">
               Seamlessly connect devices with intelligent software and cloud
@@ -345,67 +339,67 @@ export default function AboutPage() {
         </section>
 
         <section className="min-h-screen grid md:grid-cols-2 bg-black py-12">
-      {/* Left Column */}
-      <div className="flex justify-center items-start md:items-center">
-        <div className="text-left px-8">
-          <h1
-            className="text-3xl md:text-6xl font-semibold leading-tight"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.15) 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            We've got the <br /> answers
-          </h1>
-          <p className="text-gray-300 text-left font-sm pt-5">its normal</p>
-          <div className="pt-5">
-            <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
-              start project
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Right Column */}
-      <div className="grid gap-4 mx-auto w-full max-w-[600px] h-fit self-center">
-        {answers.map((item, index) => (
-          <div
-            key={index}
-            className={`bg-[#111] rounded-2xl border border-gray-800 transition-all duration-300 p-6`}
-          >
-            {/* Question Row */}
-            <div
-              className="flex justify-between items-center cursor-pointer"
-              onClick={() =>
-                setOpenIndex(openIndex === index ? null : index)
-              }
-            >
-              <div className="text-xl font-bold text-left">
-                {item.question}
+          {/* Left Column */}
+          <div className="flex justify-center items-start md:items-center">
+            <div className="text-left px-8">
+              <h1
+                className="text-3xl md:text-6xl font-semibold leading-tight"
+                style={{
+                  background:
+                    "linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0.15) 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                We've got the <br /> answers
+              </h1>
+              <p className="text-gray-300 text-left font-sm pt-5">its normal</p>
+              <div className="pt-5">
+                <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
+                  start project
+                </button>
               </div>
-              <ChevronDown
-                className={`w-7 h-7 text-lime-400 transition-transform duration-300 ${
-                  openIndex === index ? "rotate-180" : ""
-                }`}
-              />
-            </div>
-
-            {/* Collapsible Answer */}
-            <div
-              className={`overflow-hidden transition-all duration-300 text-gray-400 text-sm ${
-                openIndex === index
-                  ? "max-h-40 mt-3 opacity-100"
-                  : "max-h-0 opacity-0"
-              }`}
-            >
-              {item.answer}
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+
+          {/* Right Column */}
+          <div className="grid gap-4 mx-auto w-full max-w-[600px] h-fit self-center">
+            {answers.map((item, index) => (
+              <div
+                key={index}
+                className={`bg-[#111] rounded-2xl border border-gray-800 transition-all duration-300 p-6`}
+              >
+                {/* Question Row */}
+                <div
+                  className="flex justify-between items-center cursor-pointer"
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                >
+                  <div className="text-xl font-bold text-left">
+                    {item.question}
+                  </div>
+                  <ChevronDown
+                    className={`w-7 h-7 text-lime-400 transition-transform duration-300 ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
+
+                {/* Collapsible Answer */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 text-gray-400 text-sm ${
+                    openIndex === index
+                      ? "max-h-40 mt-3 opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  {item.answer}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <section className="bg-black items-center max-w-6xl mx-auto  pb-20">
           <div className="mx-auto h-120 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition">
