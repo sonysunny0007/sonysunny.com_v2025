@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { Link as LinkIcon } from "lucide-react"; // ✅ Renamed icon import
+import Link from "next/link"; // ✅ Correct Next.js Link import
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -10,7 +12,7 @@ export default function Hero() {
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d");
-    if (!ctx) return; // Ensure ctx exists
+    if (!ctx) return;
 
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
@@ -83,18 +85,23 @@ export default function Hero() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Design. Develop. Deliver smarter <br /> Your partner in technology innovation
+          Design. Develop. Deliver smarter <br /> Your partner in technology
+          innovation
         </h1>
 
         <p className="max-w-3xl text-gray-300 text-lg mb-12 leading-relaxed">
-          Building Smarter Systems by Connecting Code, Circuits, and the Cloud
-          — One Layer at a Time.
+          Building Smarter Systems by Connecting Code, Circuits, and the Cloud —
+          One Layer at a Time.
         </p>
 
-        <div className="flex gap-6">
-          <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
-            Start a project
-          </button>
+        {/* ✅ Fixed button */}
+        <div className="flex items-center justify-center">
+          <Link
+            href="/start_project"
+            className="inline-flex items-center gap-2 bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition text-base"
+          >
+            Start project
+          </Link>
         </div>
       </div>
     </section>
