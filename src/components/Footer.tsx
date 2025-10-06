@@ -3,71 +3,70 @@ import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <main className="bg-black text-white" id="contact">
-    <footer className="bg-black text-white py-12">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
-        {/* Left Section */}
-        <div>
-          <Link href="/" className="text-2xl font-bold">sonysunny.com</Link>
+    <footer className="bg-black text-white" role="contentinfo" id="contact">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+        
+        {/* Logo & Social */}
+        <section>
+          <Link href="/" className="text-2xl font-bold hover:text-lime-400 transition">
+            sonysunny.com
+          </Link>
           <p className="mt-4 text-gray-400">
             Connecting Code, Circuits, and the Cloud.
           </p>
           <div className="flex space-x-4 mt-6 text-xl">
-            <a href="#" aria-label="Instagram">
-              <FaInstagram />
-            </a>
-            <a href="#" aria-label="Twitter">
-              <FaTwitter />
-            </a>
-            <a href="#" aria-label="Facebook">
-              <FaFacebook />
-            </a>
-            <a href="#" aria-label="LinkedIn">
-              <FaLinkedin />
-            </a>
+            <a href="#" aria-label="Instagram" className="hover:text-lime-400 transition"><FaInstagram /></a>
+            <a href="#" aria-label="Twitter" className="hover:text-lime-400 transition"><FaTwitter /></a>
+            <a href="#" aria-label="Facebook" className="hover:text-lime-400 transition"><FaFacebook /></a>
+            <a href="#" aria-label="LinkedIn" className="hover:text-lime-400 transition"><FaLinkedin /></a>
           </div>
-        </div>
+        </section>
 
         {/* Pages */}
-        <div>
+        <section>
           <h3 className="font-semibold mb-4">PAGES</h3>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About us</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="/contact">Contact me</a></li>
+            <li><Link href="/" className="hover:text-lime-400 transition">Home</Link></li>
+            <li><Link href="/about" className="hover:text-lime-400 transition">About us</Link></li>
+            <li><a href="/#projects" className="hover:text-lime-400 transition">Projects</a></li>
+            <li><a href="/#blog" className="hover:text-lime-400 transition">Blog</a></li>
+            <li><Link href="/start_project" className="hover:text-lime-400 transition">Contact me</Link></li>
           </ul>
-        </div>
+        </section>
 
-        {/* Template */}
-        <div>
+        {/* For You */}
+        <section>
           <h3 className="font-semibold mb-4">For you</h3>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="#store">Store</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#">Licenses</a></li>
+            <li><a href="/#store" className="hover:text-lime-400 transition">Store</a></li>
+            <li><a href="/#services" className="hover:text-lime-400 transition">Services</a></li>
           </ul>
-        </div>
+        </section>
 
         {/* Email Subscription */}
-        <div>
+        <section>
           <h3 className="font-semibold mb-4">EMAIL</h3>
-          <form className="bg-neutral-900 p-4 rounded-xl space-y-3" action="mailto:sonysunny028@gmail.com" method="post" encType="text/plain">
+          <form
+            className="bg-neutral-900 p-4 rounded-xl space-y-3"
+            action="mailto:sonysunny028@gmail.com"
+            method="post"
+            encType="text/plain"
+          >
             <input
               type="email"
               name="email"
-              placeholder="sonysunny028@gmail.com"
-              className="w-full px-4 py-2 rounded-lg bg-neutral-800 text-white focus:outline-none"
+              placeholder="Enter your email"
+              className="w-full px-4 py-2 rounded-lg bg-neutral-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-lime-400 transition"
+              required
             />
             <button
               type="submit"
-              className="w-full py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition"
+              className="w-full py-2 bg-lime-400 text-black font-semibold rounded-lg hover:bg-lime-500 transition"
             >
               Send me →
             </button>
           </form>
-        </div>
+        </section>
       </div>
 
       {/* Bottom Section */}
@@ -75,6 +74,5 @@ export default function Footer() {
         © All rights reserved by <span className="font-semibold">sonysunny.com</span>. Powered by <span className="font-semibold">Next.js</span>.
       </div>
     </footer>
-    </main>
   );
 }
