@@ -24,9 +24,9 @@ const testimonials = [
     text: "It has been an absolute pleasure working with Relume. The team went above and beyond to help us execute on our vision and always.",
   },
   {
-    name: "Matthew Johnson",
+    name: "Clara Mike",
     role: "Fashion Designer",
-    image: "/avatar4.png",
+    image: "/fashion_designer.png",
     rating: 4.5,
     text: "It has been an absolute pleasure working with Relume. The team went above and beyond to help us execute on our vision and always.",
   },
