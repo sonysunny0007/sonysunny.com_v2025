@@ -102,10 +102,13 @@ export default function AboutPage() {
             — One Layer at a Time.
           </p>
 
-          <div className="flex gap-6">
-            <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
-              start project
-            </button>
+          <div className="flex items-center justify-center">
+            <Link
+              href="/start_project"
+              className="inline-flex items-center gap-2 bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition text-base"
+            >
+              Start project
+            </Link>
           </div>
         </section>
 
@@ -229,10 +232,13 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="justify-center items-center pl-50">
-            <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
-              start project
-            </button>
+          <div className="flex items-center justify-center">
+            <Link
+              href="/start_project"
+              className="inline-flex items-center gap-2 bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition text-base"
+            >
+              Start project
+            </Link>
           </div>
         </section>
 
@@ -353,11 +359,14 @@ export default function AboutPage() {
               >
                 We've got the <br /> answers
               </h1>
-              <p className="text-gray-300 text-left font-sm pt-5">its normal</p>
-              <div className="pt-5">
-                <button className="bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition">
-                  start project
-                </button>
+              <p className="text-gray-300 text-left font-sm pt-5"></p>
+              <div className="flex">
+                <Link
+                  href="/start_project"
+                  className="inline-flex items-center gap-2 bg-lime-400 text-black font-semibold px-8 py-4 rounded-full hover:bg-lime-300 transition text-base"
+                >
+                  Start project
+                </Link>
               </div>
             </div>
           </div>
@@ -419,7 +428,7 @@ export default function AboutPage() {
             {/* Explore More Button */}
             <div className="text-center pt-15">
               <Link
-                href="/blog"
+                href="/start_project"
                 className="inline-block px-6 py-3 bg-lime-400 text-black rounded-full font-semibold hover:bg-lime-300 transition"
               >
                 Explore More
