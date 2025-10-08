@@ -18,9 +18,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
         {/* Logo */}
         <div className="absolute left-4">
-          <Link href="/" className="text-xl font-bold text-white">
-            sonysunny.com
-          </Link>
+            <Link href="/" className="text-xl font-bold text-white">
+              <img
+                src="/sony-logo-01.png"
+                alt="Project"
+                className="rounded-xl object-cover max-h-[120px]"
+              />
+            </Link>
         </div>
 
         {/* Nav Links */}
