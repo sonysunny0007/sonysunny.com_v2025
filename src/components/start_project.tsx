@@ -2,19 +2,14 @@
 
 import Image from "next/image";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 
 const blocks = [
   {
     icon: (
       <div className="flex items-center justify-self-end">
-              <Image
-                src="/starting_1.png"
-                alt="Start Project"
-                width={800}
-                height={800}
-              />
-            </div>
+        <Image src="/starting_1.png" alt="Start Project" width={800} height={800} />
+      </div>
     ),
     title: "Starting",
     tag: "You are here",
@@ -22,13 +17,8 @@ const blocks = [
   {
     icon: (
       <div className="flex items-center justify-self-end">
-              <Image
-                src="/planning_1.png"
-                alt="Start Project"
-                width={800}
-                height={800}
-              />
-            </div>
+        <Image src="/planning_1.png" alt="Start Project" width={800} height={800} />
+      </div>
     ),
     title: "Planning",
     tag: "Next step",
@@ -36,13 +26,8 @@ const blocks = [
   {
     icon: (
       <div className="flex items-center justify-self-end">
-              <Image
-                src="/design_1.png"
-                alt="Start Project"
-                width={800}
-                height={800}
-              />
-            </div>
+        <Image src="/design_1.png" alt="Start Project" width={800} height={800} />
+      </div>
     ),
     title: "Design",
     tag: "Work in progress",
@@ -50,13 +35,8 @@ const blocks = [
   {
     icon: (
       <div className="flex items-center justify-self-end">
-              <Image
-                src="/launch_1.png"
-                alt="Start Project"
-                width={800}
-                height={800}
-              />
-            </div>
+        <Image src="/launch_1.png" alt="Start Project" width={800} height={800} />
+      </div>
     ),
     title: "Launch",
     tag: "Ready",
@@ -64,13 +44,8 @@ const blocks = [
   {
     icon: (
       <div className="flex items-center justify-self-end">
-              <Image
-                src="/done_1.png"
-                alt="Start Project"
-                width={800}
-                height={800}
-              />
-            </div>
+        <Image src="/done_1.png" alt="Start Project" width={800} height={800} />
+      </div>
     ),
     title: "Done",
     tag: "Completed",
@@ -78,6 +53,52 @@ const blocks = [
 ];
 
 export default function StartProjectPage() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+    subscribe: false,
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const target = e.target as HTMLInputElement; // Cast to HTMLInputElement
+  const { name, value, type, checked } = target;
+  setFormData((prev) => ({
+    ...prev,
+    [name]: type === "checkbox" ? checked : value,
+  }));
+};
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        alert("Message sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: "",
+          subscribe: false,
+        });
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong!");
+    }
+  };
+
   return (
     <main className="min-h-screen bg-black flex items-center justify-center py-20">
       <section className="flex flex-col items-center justify-center text-center py-16 px-4 bg-black">
@@ -91,8 +112,7 @@ export default function StartProjectPage() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Have projects in mind? <br className="hidden md:block" /> Let’s work
-          together.
+          Have projects in mind? <br className="hidden md:block" /> Let’s work together.
         </h1>
 
         {/* Image */}
@@ -117,9 +137,7 @@ export default function StartProjectPage() {
                 <div className="w-12 h-12 mb-4 rounded-full flex items-center justify-center text-yellow-400">
                   {item.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-1">
-                  {item.title}
-                </h3>
+                <h3 className="text-lg font-semibold text-white mb-1">{item.title}</h3>
                 <p className="text-gray-400 text-sm">{item.tag}</p>
               </div>
             ))}
@@ -175,45 +193,59 @@ export default function StartProjectPage() {
 
                 {/* RIGHT PANEL – FORM */}
                 <div className="md:col-span-2 p-8">
-                  <h4 className="text-2xl font-bold text-white mb-6">
-                    Get in Touch
-                  </h4>
+                  <h4 className="text-2xl font-bold text-white mb-6">Get in Touch</h4>
 
-                  <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <form className="grid grid-cols-1 md:grid-cols-2 gap-4" onSubmit={handleSubmit}>
                     <input
                       type="text"
+                      name="firstName"
                       placeholder="Your First name"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       className="w-full bg-[#121212] border border-[#222] rounded-xl p-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-400"
                     />
                     <input
                       type="text"
+                      name="lastName"
                       placeholder="Your Last name"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       className="w-full bg-[#121212] border border-[#222] rounded-xl p-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-400"
                     />
                     <input
                       type="email"
+                      name="email"
                       placeholder="Enter your e-mail"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full bg-[#121212] border border-[#222] rounded-xl p-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-400"
                     />
                     <input
                       type="text"
+                      name="subject"
                       placeholder="Subject"
+                      value={formData.subject}
+                      onChange={handleChange}
                       className="w-full bg-[#121212] border border-[#222] rounded-xl p-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-400"
                     />
                     <textarea
+                      name="message"
                       placeholder="Type your message"
                       rows={6}
+                      value={formData.message}
+                      onChange={handleChange}
                       className="md:col-span-2 w-full bg-[#121212] border border-[#222] rounded-xl p-4 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-400"
                     />
                     <div className="flex items-center gap-4 md:col-span-2 justify-between mt-2">
                       <label className="inline-flex items-center gap-2 text-gray-300">
                         <input
                           type="checkbox"
+                          name="subscribe"
+                          checked={formData.subscribe}
+                          onChange={handleChange}
                           className="form-checkbox h-4 w-4 rounded border-gray-600 bg-transparent text-lime-300"
                         />
-                        <span className="text-gray-300">
-                          Subscribe to our email newsletter.
-                        </span>
+                        <span className="text-gray-300">Subscribe to our email newsletter.</span>
                       </label>
 
                       <button
