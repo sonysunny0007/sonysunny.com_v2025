@@ -285,13 +285,23 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-black items-center max-w-6xl mx-auto pt-15">
-          <div className="mx-auto h-80 bg-[#111] rounded-3xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition">
-            <h3 className="text-3xl font-bold mb-3 shodow-lg whitespace-pre-line pl-5 pt-10">
-              Real-time connect with <br />
-              sony sunny
-            </h3>
-            <p className="shadow-lg pl-5 text-gray-400">Connect with Ray</p>
+        <section className="w-fill flex justify-center items-center py-10 bg-black">
+          <div className="w-[90%] max-w-6xl flex items-center justify-between rounded-2xl bg-[#111] p-10">
+            {/*Ledt column*/}
+            <div className="text-left max-w-lg">
+              <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
+                Real-time colobration <br /> with developers
+              </h1>
+              <p className="mt-4 text-gray-400 cursor-pointer hover:underline">
+                Connect with Alice
+              </p>
+            </div>
+              
+              {/*Right Column*/}
+              <div className="w-[300px] h-[300px] border border-gray-800 rounded-xl flex items-center justify-center">
+                <img src="lets_work_together_1.png" alt="Lets work together" className="rounded-xl">
+                </img>
+              </div>
           </div>
         </section>
 
