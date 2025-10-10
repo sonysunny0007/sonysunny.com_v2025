@@ -97,10 +97,12 @@ export default function PrioritySection() {
 
           {/* Right Image */}
           <div className="flex justify-center">
-            <img
+            <Image
               src="/research_iot.jpg"
               alt="Project"
-              className="rounded-3xl object-cover max-h-[500px]"
+              width={700}
+              height={700}
+              className="rounded-3xl object-cover"
             />
           </div>
         </div>
