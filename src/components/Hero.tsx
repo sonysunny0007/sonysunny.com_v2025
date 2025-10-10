@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Link as LinkIcon } from "lucide-react"; // ✅ Renamed icon import
 import Link from "next/link"; // ✅ Correct Next.js Link import
 
 export default function Hero() {
