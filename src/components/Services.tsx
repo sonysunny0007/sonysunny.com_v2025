@@ -163,13 +163,6 @@ const features = [
   },
 ];
 
-const prog = [
-  {
-    title: "Real-time colobration \n with developers",
-    description: "Connect with John",
-  },
-];
-
 export default function FeatureCards() {
   return (
     <>
@@ -235,9 +228,14 @@ export default function FeatureCards() {
             </div>
               
               {/*Right Column*/}
-              <div className="w-[300px] h-[300px] border border-gray-800 rounded-xl flex items-center justify-center">
-                <img src="lets_work_together_1.png" alt="Lets work together" className="rounded-xl">
-                </img>
+              <div className="border border-gray-800 rounded-xl flex items-center justify-center">
+                <Image
+                  src="lets_work_together_1.png"
+                  alt="Lets work together"
+                  width={300}
+                  height={200}
+                  className="rounded-xl"
+                  />
               </div>
           </div>
         </section>
