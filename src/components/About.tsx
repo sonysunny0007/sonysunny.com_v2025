@@ -3,8 +3,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MdDescription } from "react-icons/md";
-import { TbSortDescendingNumbers } from "react-icons/tb";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -12,9 +10,9 @@ const work_experience = [
   {
     period: "March 2015 - May 2018",
     company: "Atwic R&D, India",
-    designation: "Hardware Design Engineer",
+    designation: "Embedded System Engineer",
     description:
-      "Hardware Design, PCB Design,Firmware Development. Software Development",
+      "Software Development, Hardware Design, PCB Design,Firmware Development. ",
   },
   {
     period: "May 2018 - September 2018",
@@ -38,13 +36,13 @@ const work_experience = [
   {
     period: "Jan 2023 - Present",
     company: "Sirius Controls, Canada",
-    designation: "Product Testing",
+    designation: "Software Testing",
     description:
       "Firmware Testing, Software Development, Cloud Integration, Product Testing, QA",
   },
   {
     period: "Jan 2021 - Present",
-    company: "IoTGliders, Canada",
+    company: "Firmynex Technologies, Canada",
     designation: "Founder & Consultant",
     description: "Consultation, FW, SW, HW Development, Cloud Integration",
   },
@@ -131,7 +129,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-6">About me</h2>
                 <p className="text-lg">
-                  I’m Sony Sunny, a technology innovator dedicated to
+                  I am Sony Sunny, a technology innovator dedicated to
                   transforming ideas into practical, future-ready solutions.
                   With expertise across firmware development, hardware design,
                   software engineering, cloud integration, and UI/UX design, I
@@ -143,7 +141,7 @@ export default function AboutPage() {
                   My approach combines technical precision, creative
                   problem-solving, and user-focused design, ensuring every
                   project is not only functional but also scalable, efficient,
-                  and intuitive. Whether it’s embedded systems, smart devices,
+                  and intuitive. Whether it&apos;s embedded systems, smart devices,
                   or seamless cloud platforms, I aim to deliver innovative
                   solutions that make an impact.
                 </p>
@@ -299,8 +297,13 @@ export default function AboutPage() {
               
               {/*Right Column*/}
               <div className="w-[300px] h-[300px] border border-gray-800 rounded-xl flex items-center justify-center">
-                <img src="lets_work_together_1.png" alt="Lets work together" className="rounded-xl">
-                </img>
+                <Image
+                  src="lets_work_together_1.png" 
+                  alt="Lets work together" 
+                  width={400}
+                  height={400}
+                  className="rounded-xl">
+                </Image>
               </div>
           </div>
         </section>
@@ -344,10 +347,17 @@ export default function AboutPage() {
                       {item.description}
                     </div>
                   </div>
-
+                  <a href="/start_project">
                   <button className="w-10 h-10 flex items-center justify-center rounded-full bg-lime-400 text-black hover:bg-lime-300 transition">
-                    <span className="text-xl">→</span>
+                    {/* <span className="text-xl">→</span> */}
+                    <Image
+                      src="/right-arrow.png"
+                      alt=""
+                      height={25}
+                      width={25}
+                      />
                   </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -367,7 +377,7 @@ export default function AboutPage() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                We've got the <br /> answers
+                We have got the <br /> answers
               </h1>
               <p className="text-gray-300 text-left font-sm pt-5"></p>
               <div className="flex">
