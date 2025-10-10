@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image"
 import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
@@ -9,10 +10,12 @@ export default function Footer() {
         {/* Logo & Social */}
         <section className="flex flex-col items-start">
           <Link href="/" className="block leading-none">
-            <img
+            <Image
               src="/sony-logo-01.png"
               alt="Project"
-              className="rounded-xl object-cover max-h-[120px] block "
+              width={220}
+              height={220}
+              className="rounded-xl object-cover"
             />
           </Link>
 
@@ -42,8 +45,8 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-400">
             <li><Link href="/" className="hover:text-lime-400 transition">Home</Link></li>
             <li><Link href="/about" className="hover:text-lime-400 transition">About us</Link></li>
-            <li><a href="/#projects" className="hover:text-lime-400 transition">Projects</a></li>
-            <li><a href="/#blog" className="hover:text-lime-400 transition">Blog</a></li>
+            <li><Link href="/#projects" className="hover:text-lime-400 transition">Projects</Link></li>
+            <li><Link href="/#blog" className="hover:text-lime-400 transition">Blog</Link></li>
             <li><Link href="/start_project" className="hover:text-lime-400 transition">Contact me</Link></li>
           </ul>
         </section>
@@ -52,8 +55,8 @@ export default function Footer() {
         <section className="flex flex-col items-start">
           <h3 className="font-semibold mb-4">For you</h3>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="/#store" className="hover:text-lime-400 transition">Store</a></li>
-            <li><a href="/#services" className="hover:text-lime-400 transition">Services</a></li>
+            <li><Link href="/#store" className="hover:text-lime-400 transition">Store</Link></li>
+            <li><Link href="/#services" className="hover:text-lime-400 transition">Services</Link></li>
           </ul>
         </section>
 
