@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-##Website version 1.0 
-##Deloyment version 0.3
+## Website version 1.0 
+## Deloyment version 0.3
 
 
 ## Getting Started
